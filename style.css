@@ -1,0 +1,10 @@
+*{
+    margin-top:10px 
+}
+#btn{
+    cursor: pointer;
+    border-radius: 10px;
+}
+#btn:hover{
+    background-color: rgb(42, 54, 165);
+}
