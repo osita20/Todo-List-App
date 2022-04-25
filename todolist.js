@@ -1,12 +1,13 @@
-var bnt = document.getElementById('btn');
-varinput = document.getElementById('input');
-var list = document.getElementById('div2');
-
-bnt.addEventListener('click',function(){
-    if(input.value.length >0){
-    var todolist = input.value;
-    list.innerText = todolist
-    input.value = '';
-    br
+var btn = document.getElementById('btn');
+var input = document.getElementById('input');
+var message =document.getElementById('message');
+  
+function dex (){
+   var li = document.createElement('li');
+   var displaymode = document.createTextNode(input.value);
+   li.appendChild(displaymode);
+   li.innerHTML +='<button onclick="this.parentNode.remove();"> delete</button >'
+   message.appendChild(li);
+   input.value= "";
 }
-});
+btn.addEventListener('click', dex );
