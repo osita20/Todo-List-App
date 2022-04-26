@@ -9,7 +9,25 @@ function dex (){
    li.appendChild(displaymode);
    li.innerHTML +='<button onclick="this.parentNode.remove();"> delete</button >'
    message.appendChild(li);
-   input.value= "";
+   input.value= ""; 
   };
 };
+function createlist(){
+    var li = document.createElement('li');
+    var displaymode = document.createTextNode(input.value);
+    li.appendChild(displaymode);
+    li.innerHTML +='<button onclick="this.parentNode.remove();"> delete</button >'
+    message.appendChild(li);
+    input.value= "";    
+};
+function inputlist(){
+    return input.value.length;
+}
+function keypresslisten(e){
+    if(inputlist()>0 && e.keyCode===13){
+        createlist();
+
+}};
+
 btn.addEventListener('click', dex );
+input.addEventListener('keypress', keypresslisten);
